@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+
+                setInterval(function(){
+                    $.ajax({
+
+                        type:"post",
+                        url:"remwaiters.php",
+
+                        success:function(data)
+                        {
+                            $("#dano").html(data)
+                            
+                        },
+
+
+                        error:function()
+                        {
+                            $("#dano").html('Not Connected');
+                        }
+                    })
+                  
+                },1000)
+
+            })
+        </script>
+
+        <div id = "dano" class = "col-md-4">
+
+        </div>
+        <h1 id = "mookie"></h1>
+    </body>
+</html>

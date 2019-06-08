@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width = device-width,initial-scale = 1.0">
+<title>BUSINESS REPORTS</title>
+<link rel="stylesheet" href="bootstrap-responsive.css">
+<script src="bootstrap.css"></script>
+<style type="text/css">
+
+
+ul{
+position:absolute;
+left:100px;
+top: 70px;
+}
+#nav li {
+	list-style-type: none;
+	margin: 0;
+	padding-bottom: 20px;
+	float: left;
+	position: relative;
+	width: 150px;
+}
+
+
+#mimi{
+    position: absolute;
+    left: 0px;
+    top:130px;
+    width: 217px;
+    border: 0px;
+    background: #3300ff;
+    height: 510px;
+}
+
+#nav a {
+	display: block;
+	padding: 10px 20px;
+	margin: 0;
+	border-left: #ccc 1px solid;
+	color: yellow;
+	background:blue;
+	font-weight: bolder;
+	text-decoration: none;
+	font-family: Arial Narrow;
+	font-size: 11pt;
+}
+
+#nav ul {
+	display: none;
+}
+
+#nav li:hover>ul {
+	display: block;
+}
+
+#nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	border-top: #ccc 1px solid;
+}
+
+#nav ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 150px;
+	background-color: blue;
+}
+
+#nav ul ul {
+	left: 150px;
+	top: 5px;
+}
+
+#nav li:hover>a {
+	color: fuchsia;
+}
+
+#nav ul {
+	background:green;
+}
+
+body {
+    background: #ccccff;
+}
+
+#nav li:first-child a,#nav ul ul li:first-child,#nav ul a {
+	border: none;
+}
+
+#splash{
+position:absolute;
+top:200px;
+left:300px;
+width:500px;
+height:400px;
+background-image:-webkit-linear-gradient(270deg,cyan,brown);
+border-radius:50%;
+top:250px;
+left:300px;
+
+}
+
+span{
+font-size:48pt;
+font-family:Arial Narrow,Verdana;
+color:navy;
+}
+
+#screen{
+position:absolute;
+top:200px;
+left:300px;
+width:700px;
+height:400px;
+display:none;
+background-image:-webkit-linear-gradient(270deg,cyan,yellow);
+border-radius:50%;
+
+}
+</style>
+
+<script type="text/javascript" src = "jquery-1.9.0.js"></script>
+<link rel = "stylesheet" href = "jquery-ui-1.9.2.custom.css">
+
+<script type="text/javascript" src = "jquery-ui-1.10.0.custom.min.js"></script>
+</head>
+<body>
+
+    <ul id="nav" class="row-fluid">
+		<li><a href="#">Sales</a>
+			<ul>
+				<li><a href="#">Daily Sales</a>
+                                    <ul>
+                                        <li><a href="dgsales.php"><nobr>General Sales<nobr></a></li>
+                                        <li><a href="dsales.php">Sales By Location</a></li>
+                                        <li><a href="#"><nobr>Sales Performance</nobr></a></li>
+                                    </ul>
+								</li>
+								<li><a href = "#">Intervally Sales </a>
+                                                                    <ul>
+                                                                        <li><a href="#">General Sales</a></li>
+                                                                        <li><a href="#">Branch Sales</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#"><nobr><nobr>Monthly Sales</nobr></a>
+                                                                    <ul>
+                                                                        <li><a href="mgsales.php">General Sales</a></li>
+                                                                        <li><a href="mbsales.php">Branch Sales</a></li>
+                                                                        
+                                                                        
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">Quarterly Sales</a>
+                                                                    
+                                                                    <ul>
+                                                                        <li><a href="#"><nobr>General</nobr></a></li>
+                                                                        <li><a href="#"><nobr>Branch Sales</nobr></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li><a href="#">Yearly Sales</a>
+                                                                    <ul>
+                                                                        <li><a href="yrgensales.php"><nobr>General Sales</nobr></a></li>
+                                                                        <li><a href="yrbsales.php"><nobr>Branch Sales</nobr></a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                
+								
+								
+								
+			</ul></li>
+                        <li><a href="#"><nobr>Stock Report</nobr></a>
+			<ul>
+                            <li><a href= "bstock.php"><nobr>Branch Stock</nobr></a></li>
+				
+                                <li><a href="granch.php">General Stock</a></li>
+                                <li><a href="stockaudit.php">Stock Audit</a></li>
+                                <li><a href="#">Derived Stock</a></li>
+				
+			</ul></li>
+                        <li><a href="#">Stock Movement</a>
+                            <ul>
+                                <li><a href="smvtrep.php">Daily</a></li>
+                                <li><a href="#">Monthly</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#">Expenses</a>
+                            <ul>
+                                <li><a href="dexpenses.php"><nobr>Daily Expenses </nobr></a></li>
+                                <li><a href="mexpenses.php">Monthly Expenses</a></li>
+                                <li><a href="yrexpenses.php">Yearly Expenses</a></li>
+                            </ul>
+                        </li>
+		
+                        <li><a href="#">Productions</a>
+                            <ul>
+                                <li><a href="#">Daily Productions</a>
+                                    <ul>
+                                        <li><a href="gprodreps.php">All Branches</a></li>
+                                        <li><a href="dprodreps.php">By Branch</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Payroll</a>
+                            <ul>
+                                <li><a href="mntpays.php"><nobr>Salary Sheet</nobr></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Analytics</a>
+                            <ul>
+                                <li><a href="#"><nobr>Cash Flow Analysis</nobr></a>
+                                    <ul>
+                                        <li><a href="#">General</a></li>
+                                        <li><a href="#">Branches</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                            
+                        
+		
+	</ul>
+    
+	
+	
+<script type="text/javascript">
+//$("#splash").fadeOut(2000);
+//$("#screen").fadeIn('explode',{pieces:30},3000);
+</script>
+
+<script type="text/javascript">
+	$("#tixx").dialog(
+			{
+				show:"slide",
+			    hide:"puff",
+			    height:"auto",
+			    width:"610",
+				position:"left top"    
+			    
+			    	
+			}
+			
+			);
+	</script>
+
+</body>
+</html>

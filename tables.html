@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+
+        <script>
+            $(document).ready(function(){
+
+                $.ajax({
+
+                   type:"post",
+                   url:"tabless.php",
+
+                   success:function(data){
+
+                    $("#rove").html(data);
+                   },
+
+                   error:function()
+                   {
+                       $("#rove").html('Not Connected');
+                   }
+
+                  
+
+                })
+
+
+                $("#btx").click(function(){
+                    var table = $("#tabe").val();
+
+                    $.ajax({
+                        type:"post",
+                        url:"tables.php",
+                        data:"table="+table,
+
+                        success:function(data)
+                        {
+                            $("#rove").html(data);
+                        },
+
+                        error:function()
+                        {
+                            $("#rove").html('Not Connected');
+                        }
+                    })
+                });
+
+                $("#btp").click(function(){
+                    var table = $("#tabe").val();
+
+                    $.ajax({
+                        type:"post",
+                        url:"tabpro.php",
+                        data:"table="+table,
+
+                        success:function(data)
+                        {
+                            $("#rove").html(data);
+                        },
+
+                        error:function()
+                        {
+                            $("#rove").html('Not Connected');
+                        }
+
+                    })
+                })
+            })
+        </script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <label>Table Number</label>
+                <input type="text" id="tabe" class="form-control">
+                <button id="btx" class="btn btn-primary">Update Table</button>
+                <button id="btp" class="btn btn-primary">Remove Table</button>
+
+            </div>
+             <div id="rove" class="col-md-4"></div>
+        </div>
+
+    </div>
+    </body>
+</html>
